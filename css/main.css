@@ -1,0 +1,244 @@
+html {
+  margin: 0;
+  padding: 0;
+  font-size: 120%;
+  font-weight: 300;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+a, img {
+    border:none;
+    outline:none;
+}
+
+li a{
+  display: block;
+  transition: all 200ms ease;
+}
+
+.img-flex{
+  width: 100%;
+  display: block;
+}
+
+input[type=text] {
+    padding: .25rem;
+    margin: 8px 0;
+    box-sizing: border-box;
+    font-family:"open sans", sans-serif;
+    font-size: 1rem;
+    border: none;
+    border-bottom: 2px solid #bed24a;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+    background-color: white;
+    border: 1px solid #002048;
+    color: #002048;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+  font-family:"open sans", sans-serif;
+  font-size: 2rem;
+    cursor: pointer;
+}
+
+.logo {
+  width: 7%;
+  padding: 3rem;
+  display: block;
+ margin:0% auto;
+}
+
+h1 {
+  color: #002048;
+  font-family:"open sans", sans-serif;
+  font-weight: 300;
+  font-size: 2rem;
+  line-height: 3rem;
+  text-align: center;
+}
+
+.label {
+  color: #002048;
+  font-family:"open sans", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  text-align: center;
+  padding-bottom:1.5rem;
+}
+
+
+.field {
+  width: 50%;
+  height:2rem;
+}
+
+.codestring{ 
+  color: #002048;
+  font-family:"open sans", sans-serif;
+  font-weight: 500;
+  font-size: 4rem;
+  text-align: center;
+  padding: 2rem;
+}
+
+.error {  color: #red;
+  font-family:"open sans", sans-serif;
+  font-weight: 300;
+  font-size: .75rem;
+  text-align: center;
+  padding-bottom:1.5rem;
+
+}
+
+.button {
+  font-family:"open sans", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  text-decoration: none;
+  margin: 0% auto;
+  display: block;
+}
+
+
+.greenbar {
+  background-color: #bed24a;
+  height: 1rem;
+  width: 100%;
+  ;}
+
+@media only screen and (max-width: 500px) {
+  nav a{
+    text-align: center !important;
+    padding: none;
+  }
+
+   nav li{
+    padding: none;
+  }
+}
+
+@media only screen and (min-width: 20em) {
+  
+body {
+    max-width:inherit;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .icon {
+    width: 45%;
+    margin: 0 auto;
+    display: block;
+    padding-top:2.5rem;
+  }
+
+
+
+p {
+  text-align: center;
+  font-family:"open sans", sans-serif;
+  color:black;
+  max-width: 75%;
+   font-weight: 300;
+  margin: 0% auto;
+  padding-top: 1.5rem;
+}
+
+.more {
+  text-align: center;
+}
+
+
+.footer-logos {
+  margin: 0% auto;
+  display: block;
+}
+
+.photo-grid {
+  margin: 0% auto;
+  display: block;
+  max-width: 90%;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+
+.plans {
+  width:70%;
+  display: block;
+  margin: 0% auto;
+  padding-bottom: .5rem;
+  padding-top: 3rem;
+}
+
+
+
+@media only screen and (min-width: 60em) {
+  .icon {
+  width: 70%;
+  display: block;
+  margin: 0% auto;
+}
+
+.unit-l-1-4 {
+  width: 24.0000%;
+}
+
+.blurb {
+  text-align: center;
+   font-weight: 300;
+  font-family: "open sans", sans-serif;
+  color: white;
+  font-size: 2rem;
+  font-weight: 200;
+  max-width: 70%;
+  margin: 0% auto;
+  padding: none;
+  line-height: 2rem;
+}
+
+h2 {
+  text-align: center;
+  font-family: "open sans", sans-serif;
+  color: black;
+  font-size: 2rem;
+  padding-top: 4rem;
+   font-weight: 300;
+  margin-bottom: .25rem;
+  border-bottom: 5px solid #C3D600;
+  max-width: 40%;
+  margin: 0% auto;
+}
+
+
+.liv-link {
+  width: 20%;
+  margin: 0% auto;
+  display: block;
+  padding-bottom: 3rem;
+}
+
+.mail-link {
+  width: 60%;
+  display: block;
+  margin: 0% auto;
+}
+
+p {
+  text-align: center;
+  font-family:"open sans", sans-serif;
+  color:black;
+   font-weight: 300;
+  max-width: 50%;
+  margin: 0% auto;
+  padding-top: 1.5rem;
+}
+
+
