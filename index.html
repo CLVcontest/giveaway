@@ -1,144 +1,72 @@
 <!DOCTYPE html>
 <html lang="en-ca">
 <head>
-  <meta charset="utf-8">
-  <title>Enter to win!</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,700' rel='stylesheet' type='text/css'>
-  <link href="css/main.css" rel="stylesheet">
-<script language="javascript" type="text/javascript">
-
-function fillHidTable(){
-    var htqf; //-- hidden field
-    var rf; //-- retrieved field
-    for ( var i = 1; i < 5; i++ ) {
-        rf = "htqf"+i;
-        document.getElementById(rf).innerHTML = document.getElementById("Q"+i+"CALC").value;
-    }
-    tableToExcel('hidTable', 'Analysis Results');
-}
-
-var tableToExcel = (function() {
-    var uri = 'data:application/vnd.ms-excel;base64,'
-            , template = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>{worksheet}</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><table>{table}</table></body></html>'
-            , base64 = function(s) { return window.btoa(unescape(encodeURIComponent(s))) }
-            , format = function(s, c) { return s.replace(/{(\w+)}/g, function(m, p) { return c[p]; }) }
-    return function(table, name) {
-        if (!table.nodeType) table = document.getElementById(table)
-        var ctx = {worksheet: name || 'Worksheet', table: table.innerHTML}
-        window.location.href = uri + base64(format(template, ctx))
-    }
-})()
-</script>
-
-<script language="javascript" type="text/javascript">
-function randomString() {
-  var chars = "0123456789";
-  var string_length = 4;
-  var randomstring = '';
-  for (var i=0; i<string_length; i++) {
-    var rnum = Math.floor(Math.random() * chars.length);
-    randomstring += chars.substring(rnum,rnum+1);
-  }
-  document.randform.randomfield.value = randomstring;
-}
-</script>
+    <meta charset="utf-8">
+    <title>Enter to win!</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,700' rel='stylesheet' type='text/css'>
+    <link href="css/main.css" rel="stylesheet">
 
 </head>
 
 <body>
 
-  <header>
+<header>
     <div class="greenbar"></div>
-   <div class="grid">
 
-      <div class="logo">
-     <img class="img-flex" src="images/logo.jpg" alt="CLV Group">
-      </div>
-  </header>
+    <div class="logo">
+        <img id="clvLogo" class="img-flex" src="images/logo.jpg" alt="CLV Group">
+    </div>
 
-  <main role="main">
-  
+</header>
 
-  <h1>Enter to WIN a FREE pair of bluetooth headphones!</h1>
+<main role="main">
 
-<form>
-<div class="submitform">
 
+<<<<<<< HEAD
 <form action="welcome.php" method="post">
 <p class="label">Name:</p> 
 <div align="middle"><input class="field" type="text" placeholder="Your Name" name="name"></div>
 <span class="error">* <?php echo $nameErr;?></span>
+=======
+    <h1>Enter to WIN a FREE pair of bluetooth headphones!</h1>
+>>>>>>> master
 
-<br>
+    <div class="submitform">
 
+<<<<<<< HEAD
 <p class="label">E-mail:</p>
 <div align="middle"><input class="field" type="text" placeholder="example@email.com" name="email"></div>
 <span class="error">* <?php echo $emailErr;?></span>
+=======
+        <form id="contestForm">
+            <p class="label">Name:</p>
+            <div align="middle"><input id="formName" class="field" type="text" name="name"></div>
+            <span id="formNameError" class="error"></span>
+>>>>>>> master
 
+            <br>
 
-<br>
+            <p class="label">E-mail:</p>
+            <div align="middle"><input id="formEmail" class="field" type="text" name="email"></div>
+            <span id="formEmailError" class="error"></span>
 
-<a href="thankyou.html"><div class="button" align="middle"><input type="submit"></div></a>
-</form>
+            <br>
 
+            <button id="submitButton" type="submit" class="button">Submit</button>
 
-<?php
-// define variables and set to empty values
-$name = $email = "";
+        </form>
+    </div>
+</main>
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $name = test_input($_POST["name"]);
-  $email = test_input($_POST["email"]);
+<footer>
 
-}
+    <p class="disclaimer">© 2016 CLV Group Inc.
+    </p>
 
-function test_input($data) {
-  $data = trim($data);
-  $data = stripslashes($data);
-  $data = htmlspecialchars($data);
-  return $data;
-}
-?>
+</footer>
 
-
-
-<?php
-// define variables and set to empty values
-$nameErr = $emailErr = $genderErr = $websiteErr = "";
-$name = $email = $gender = $comment = $website = "";
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  if (empty($_POST["name"])) {
-    $nameErr = "Name is required";
-  } else {
-    $name = test_input($_POST["name"]);
-  }
-
-  if (empty($_POST["email"])) {
-    $emailErr = "Email is required";
-  } else {
-    $email = test_input($_POST["email"]);
-  }
-}
-?>
-
-
-
-
-
-
-
-  </main>
-
-  <footer>
-
-  	 	<p class="disclaimer">© 2016 CLV Group Inc.
-</p>
- 
-  </footer>
-
-
+<script src="js/main.js"></script>
 </body>
 
 </html>
