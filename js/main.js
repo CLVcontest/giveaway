@@ -117,6 +117,9 @@ function formSubmitted (ev) {
     localStorage.setItem("contest", JSON.stringify(contestObject));
 
     alert("Thank You For Entering The Contest!\n" + "Your lock code is: " + randomNumber);
+
+    formName.value = '';
+    formEmail.value = '';
   }
 }
 
