@@ -16,6 +16,10 @@ body {
     display: block;
 }
 
+.eoe {
+    font-size: .70rem;
+}
+
 a, img {
     border: none;
     outline: none;
