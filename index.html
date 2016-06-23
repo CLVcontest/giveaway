@@ -6,36 +6,6 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,700' rel='stylesheet' type='text/css'>
     <link href="css/main.css" rel="stylesheet">
-    <!--<script language="javascript" type="text/javascript">-->
-
-        <!--function fillHidTable() {-->
-            <!--var htqf; //&#45;&#45; hidden field-->
-            <!--var rf; //&#45;&#45; retrieved field-->
-            <!--for (var i = 1; i < 5; i++) {-->
-                <!--rf = "htqf" + i;-->
-                <!--document.getElementById(rf).innerHTML = document.getElementById("Q" + i + "CALC").value;-->
-            <!--}-->
-            <!--tableToExcel('hidTable', 'Analysis Results');-->
-        <!--}-->
-
-        <!--var tableToExcel = (function () {-->
-            <!--var uri = 'data:application/vnd.ms-excel;base64,'-->
-                    <!--, template = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head>&lt;!&ndash;[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>{worksheet}</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]&ndash;&gt;</head><body><table>{table}</table></body></html>'-->
-                    <!--, base64 = function (s) {-->
-                <!--return window.btoa(unescape(encodeURIComponent(s)))-->
-            <!--}-->
-                    <!--, format = function (s, c) {-->
-                <!--return s.replace(/{(\w+)}/g, function (m, p) {-->
-                    <!--return c[p];-->
-                <!--})-->
-            <!--}-->
-            <!--return function (table, name) {-->
-                <!--if (!table.nodeType) table = document.getElementById(table)-->
-                <!--var ctx = {worksheet: name || 'Worksheet', table: table.innerHTML}-->
-                <!--window.location.href = uri + base64(format(template, ctx))-->
-            <!--}-->
-        <!--})()-->
-    <!--</script>-->
 
 </head>
 
@@ -55,25 +25,25 @@
 
     <h1>Enter to WIN a FREE pair of bluetooth headphones!</h1>
 
-        <div class="submitform">
+    <div class="submitform">
 
-            <form id="contestForm" action="welcome.php" method="post">
-                <p class="label">Name:</p>
-                <div align="middle"><input id="formName" class="field" type="text" name="name"></div>
-                <span id="formNameError" class="error"></span>
+        <form id="contestForm">
+            <p class="label">Name:</p>
+            <div align="middle"><input id="formName" class="field" type="text" name="name"></div>
+            <span id="formNameError" class="error"></span>
 
-                <br>
+            <br>
 
-                <p class="label">E-mail:</p>
-                <div align="middle"><input id="formEmail" class="field" type="text" name="email"></div>
-                <span id="formEmailError" class="error"></span>
+            <p class="label">E-mail:</p>
+            <div align="middle"><input id="formEmail" class="field" type="text" name="email"></div>
+            <span id="formEmailError" class="error"></span>
 
-                <br>
+            <br>
 
-                <button id="submitButton" type="submit" class="button">Submit</button>
+            <button id="submitButton" type="submit" class="button">Submit</button>
 
-            </form>
-        </div>
+        </form>
+    </div>
 </main>
 
 <footer>
