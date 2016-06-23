@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", init);
 var winningContestantNumber = 50;
 var winningNumber = 4689; // Do not start it with a zero
 var adminPassword = '0000';
-var adminEmailAddress = 'kbourquedesigns@gmail.com';
+var adminEmailAddress = 'social@clvgroup.com';
 
 /* Global Variables */
 var clvLogo, adminForm, adminFunctions, contestForm, emailAdminBtn, clearEmailsBtn;
