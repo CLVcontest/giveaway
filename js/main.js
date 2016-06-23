@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", init);
 var winningContestantNumber = 50;
 var winningNumber = 4689; // Do not start it with a zero
 var adminPassword = '0000';
+var adminEmailAddress = 'kbourquedesigns@gmail.com';
 
 /* Global Variables */
 var clvLogo, adminForm, adminFunctions, contestForm, emailAdminBtn, clearEmailsBtn;
@@ -77,7 +78,7 @@ function emailAdmin() {
     bodyemail += contestObject[i].name + ',' + contestObject[i].email + ',' + contestObject[i].number + '\n';
   }
 
-  var email = 'kirkdavies@rogers.com';
+  var email = adminEmailAddress;
   var subject = 'CLV Contest Email List';
   var mailto_link = 'mailto:' + email + '?subject=' + subject + '&body=' + encodeURI(bodyemail);
 
