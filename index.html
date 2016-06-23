@@ -16,6 +16,13 @@
 
     <div class="logo">
         <img id="clvLogo" class="img-flex" src="images/logo.jpg" alt="CLV Group">
+
+        <form id="adminForm" style="display:none">
+            <div align="middle"><input id="adminPassword" class="field" type="text" name="admin" pattern="\d*" style="min-width: 150px"></div>
+            <button type="submit" class="button">Submit</button>
+        </form>
+
+        <div id="adminFunctions" align="middle" style="display: none"><button id="emailAdmin">Send List of Emails</button><button id="clearEmails">Clear All Emails</button></div>
     </div>
 
 </header>
@@ -40,7 +47,7 @@
 
             <br>
 
-            <button id="submitButton" type="submit" class="button">Submit</button>
+            <button type="submit" class="button">Submit</button>
 
         </form>
     </div>

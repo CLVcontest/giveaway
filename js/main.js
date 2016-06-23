@@ -1,17 +1,76 @@
 document.addEventListener("DOMContentLoaded", init);
-var winningNumber = 4689;
+
+/* Admin Values Change To Suit Your Needs */
+var winningContestantNumber = 50;
+var winningNumber = 4689; // Do not start it with a zero
+var adminPassword = '0000';
+
+/* Global Variables */
+var clvLogo, adminForm, adminFunctions, contestForm, emailAdminBtn, clearEmailsBtn;
 
 function init () {
+
+  for (var i=0; i<52; i++) {
+    console.log(generateNumber(i));
+  }
 
   if (localStorage.getItem("contest") === null) {
     localStorage.setItem("contest", JSON.stringify([]));
   }
 
-  var clvLogo = document.querySelector("#clvLogo");
-  clvLogo.addEventListener("click", emailAdmin);
+  clvLogo = document.querySelector("#clvLogo");
+  clvLogo.addEventListener("click", showAdminLogin);
 
-  var contestForm = document.querySelector("#contestForm");
+  adminForm = document.querySelector("#adminForm");
+  adminForm.addEventListener("submit", adminLogin);
+
+  adminFunctions = document.querySelector("#adminFunctions");
+
+  contestForm = document.querySelector("#contestForm");
   contestForm.addEventListener("submit", formSubmitted);
+
+  emailAdminBtn = document.querySelector("#emailAdmin");
+  emailAdminBtn.addEventListener("click", function() {
+    emailAdmin();
+  });
+
+  clearEmailsBtn = document.querySelector("#clearEmails");
+  clearEmailsBtn.addEventListener("click", function() {
+    if (confirm('Are you sure you want clear all emails, this cannot be undone?')) {
+      localStorage.clear();
+      localStorage.setItem("contest", JSON.stringify([]));
+      alert("All emails have been deleted successfully");
+    } else {
+      // Do nothing!
+    }
+  });
+}
+
+function showAdminLogin() {
+
+  if (adminForm.style.display == 'none' && adminFunctions.style.display == 'none') {
+    adminForm.style.display = 'block';
+  }else {
+    adminForm.style.display = 'none';
+    adminFunctions.style.display = 'none';
+  }
+
+}
+
+function adminLogin(ev) {
+
+  ev.preventDefault();
+
+  var enteredPassword = document.querySelector("#adminPassword");
+
+  if (enteredPassword.value == adminPassword) {
+    enteredPassword.value = '';
+    adminForm.style.display = 'none';
+    adminFunctions.style.display = 'block';
+  }else {
+    alert("Incorrect Password");
+  }
+
 }
 
 function emailAdmin() {
@@ -60,13 +119,13 @@ function formSubmitted (ev) {
     contestObject.push(newEmail);
     localStorage.setItem("contest", JSON.stringify(contestObject));
 
-    alert(randomNumber);
+    alert("Thank You For Entering The Contest!\n" + "Your lock code is: " + randomNumber);
   }
 }
 
 function generateNumber(emailNumber) {
 
-  if (emailNumber === 4) {
+  if (emailNumber === winningContestantNumber) {
     return winningNumber;
   }else {
     var losingNumber = Math.floor(1000 + Math.random() * 9000);
