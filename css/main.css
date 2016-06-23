@@ -79,15 +79,6 @@ h1 {
     padding-bottom: 1.5rem;
 }
 
-.nameError {
-    text-align: center;
-    color: #666666;
-}
-
-.emailError {
-    text-align: center;
-    color: #666666;
-}
 
 .field {
     width: 50%;
