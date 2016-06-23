@@ -79,7 +79,12 @@ h1 {
     padding-bottom: 1.5rem;
 }
 
-.formError, .nameError {
+.nameError {
+    text-align: center;
+    color: #666666;
+}
+
+.emailError {
     text-align: center;
     color: #666666;
 }
