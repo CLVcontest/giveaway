@@ -10,10 +10,6 @@ var clvLogo, adminForm, adminFunctions, contestForm, emailAdminBtn, clearEmailsB
 
 function init () {
 
-  for (var i=0; i<52; i++) {
-    console.log(generateNumber(i));
-  }
-
   if (localStorage.getItem("contest") === null) {
     localStorage.setItem("contest", JSON.stringify([]));
   }
