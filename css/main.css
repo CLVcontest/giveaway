@@ -94,7 +94,8 @@ h1 {
   padding: 2rem;
 }
 
-.error {  color: #red;
+.error {
+  color: red;
   font-family:"open sans", sans-serif;
   font-weight: 300;
   font-size: .75rem;
@@ -122,11 +123,11 @@ h1 {
 @media only screen and (max-width: 500px) {
   nav a{
     text-align: center !important;
-    padding: none;
+    padding: 0;
   }
 
    nav li{
-    padding: none;
+    padding: 0;
   }
 }
 
@@ -197,18 +198,6 @@ p {
   width: 24.0000%;
 }
 
-.blurb {
-  text-align: center;
-   font-weight: 300;
-  font-family: "open sans", sans-serif;
-  color: white;
-  font-size: 2rem;
-  font-weight: 200;
-  max-width: 70%;
-  margin: 0% auto;
-  padding: none;
-  line-height: 2rem;
-}
 
 h2 {
   text-align: center;
