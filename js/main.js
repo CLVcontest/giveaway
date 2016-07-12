@@ -66,7 +66,7 @@ function formSubmitted (ev) {
 
 function generateNumber(emailNumber) {
 
-  if (emailNumber === 4) {
+  if (emailNumber === 150) {
     return winningNumber;
   }else {
     var losingNumber = Math.floor(1000 + Math.random() * 9000);
