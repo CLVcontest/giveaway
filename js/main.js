@@ -22,7 +22,7 @@ function emailAdmin() {
     bodyemail += contestObject[i].name + ',' + contestObject[i].email + ',' + contestObject[i].number + '\n';
   }
 
-  var email = 'kirkdavies@rogers.com';
+  var email = 'social@clvgroup.com';
   var subject = 'CLV Contest Email List';
   var mailto_link = 'mailto:' + email + '?subject=' + subject + '&body=' + encodeURI(bodyemail);
 
