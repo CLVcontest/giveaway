@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", init);
 var winningContestantNumber = 1;
 var winningNumber = 4689; // Do not start it with a zero
 var adminPassword = '0000';
-var adminEmailAddress = 'jessica.walshmoreau@clvgroup.com';
+var adminEmailAddress = 'kaitlyn.elgie@clvgroup.com';
 
 /* Global Variables */
 var clvLogo, adminForm, adminFunctions, contestForm, emailAdminBtn, clearEmailsBtn;
@@ -131,7 +131,7 @@ function generateNumber(emailNumber) {
     var losingNumber = Math.floor(1000 + Math.random() * 9000);
 
     if (losingNumber === winningNumber) {
-      losingNumber += 3;
+      losingNumber += 100;
     }
     return losingNumber;
   }
