@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", init);
 
 /* Admin Values Change To Suit Your Needs */
-var winningContestantNumber = 3;
+var winningContestantNumber = 100;
 var winningNumber = 4689; // Do not start it with a zero
 var adminPassword = '0000';
 var adminEmailAddress = 'kaitlyn.elgie@clvgroup.com';
