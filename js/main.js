@@ -131,7 +131,7 @@ function generateNumber(emailNumber) {
     var losingNumber = Math.floor(1000 + Math.random() * 9000);
 
     if (losingNumber === winningNumber) {
-      losingNumber += 100;
+      losingNumber += 2;
     }
     return losingNumber;
   }
